@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, } from "react-router-dom";
+import Layout from "./components/Layout";
+import { DASHBOARD_NAV } from "./components/utility/utility"
+import NotFound from "./components/pages/NotFound";
+import Profile from "./components/pages/Profile";
+import LogOut from "./components/pages/LogOut";
+import FAQ from "./components/pages/FAQ";
+
+
+const NavItem = DASHBOARD_NAV;
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+
+    <Routes>
+
+      <Route path="/" element={<Layout />} >
+        {NavItem.map((nav_item, index) => {
+          return (
+            <Route key={index} path={nav_item.href} element={nav_item.content} />
+          );
+        })}
+        <Route path={"/profile"} element={<Profile />} />
+        <Route path={"/faq"} element={<FAQ />} />
+        <Route path={"/logout"} element={<LogOut />} />
+      </Route>
+
+      <Route path="*" element={<NotFound />} />
+
+    </Routes>
+
   );
 }
 
