@@ -30,7 +30,7 @@ function Layout() {
 
 
                 </div>
-                <div className=" overflow-y-auto h-[93vh] flex-1 border-[#d1d1d1] rounded border-l-[10px] border-t-[8px] md:border-l-[13px] md:border-t-[11px]">
+                <div className=" overflow-y-auto h-[94vh] flex-1 border-[#d1d1d1] rounded-tl border-l-[10px] md:border-r-[5px] border-t-[8px] md:border-l-[13px] md:border-t-[11px]">
                     <Outlet />
                 </div>
             </div>

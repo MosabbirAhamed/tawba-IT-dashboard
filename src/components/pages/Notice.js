@@ -2,7 +2,11 @@ import React from 'react'
 
 const Notice = () => {
     return (
-        <div>Notice</div>
+        <div>
+            <div >Notice</div>
+
+
+        </div>
     )
 }
 

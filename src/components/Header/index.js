@@ -1,13 +1,38 @@
 import React, { useState } from 'react'
+import { useLocation } from 'react-router-dom';
 import { AiOutlineMenuFold, AiOutlinePhone } from 'react-icons/ai';
 import { HiOutlineMail } from 'react-icons/hi';
 import Faq from './Faq';
 
+
 const Header = ({ onClick }) => {
+
+    const url = useLocation();
 
     const [showFaq, setshowFaq] = useState(false)
 
-    const faq = () => setshowFaq(!showFaq);
+    const profileOpen = (e) => {
+        setshowFaq(!showFaq);
+    };
+    const profileClose = (e) => {
+        setshowFaq(false);
+
+    }
+
+    let title = url.pathname.split('')
+
+    if (title.length > 2) {
+        title.shift()
+        title[0] = title[0].toLocaleUpperCase()
+        title = title.join("")
+    } else {
+        title = "Dashboard"
+    }
+
+
+
+
+
 
     return (
         <header>
@@ -21,7 +46,7 @@ const Header = ({ onClick }) => {
                     >
                         <AiOutlineMenuFold className="md:text-[30px] text-[20px] font-bold" />
                     </button>
-                    <h1 className="md:font-bold md:text-3xl text-md">Payment</h1>
+                    <h1 className="md:font-bold md:text-3xl text-md">{title}</h1>
                 </div>
 
                 <div>
@@ -31,10 +56,10 @@ const Header = ({ onClick }) => {
                 <div className='items-center flex gap-2 md:gap-4'>
                     <span> <HiOutlineMail className="md:text-[30px] text-[24px] text-gray-600  hover:text-blue-400 transition-all " /> </span>
                     <span> <AiOutlinePhone className=" md:text-[30px] text-[24px] text-gray-600 hover:text-blue-400 transition-all" /> </span>
-                    <img onClick={faq} className='cursor-pointer w-7 md:w-10 h-7 md:h-10 rounded-[50%]' src="/images/admin.PNG" alt="" />
+                    <img onClick={(e) => (profileOpen(e))} className='cursor-pointer w-7 md:w-10 h-7 md:h-10 rounded-[50%]' src="/images/admin.PNG" alt="" />
                 </div>
 
-                {showFaq && <Faq />}
+                {showFaq && <Faq onClick={profileClose} />}
             </div>
 
 

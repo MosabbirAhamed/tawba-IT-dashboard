@@ -1,7 +1,6 @@
-import { BiUser } from "react-icons/bi";
-import { FiSliders } from "react-icons/fi";
-import { BsCart } from "react-icons/bs";
-import { TbAddressBook } from "react-icons/tb";
+import { BiUser, BiDollar } from "react-icons/bi";
+import { AiFillDashboard, AiOutlineProject, AiFillNotification, AiOutlineSetting } from "react-icons/ai";
+import { BsFileEarmarkSpreadsheetFill } from "react-icons/bs";
 import Dashbord from "../pages/Dashbord";
 import Sheet from "../pages/Sheet";
 import Notice from "../pages/Notice";
@@ -16,117 +15,97 @@ export const DASHBOARD_NAV = [
     {
         title: "Dashboard",
         href: '/',
-        icon: <FiSliders />,
+        icon: <AiFillDashboard />,
         content: <Dashbord />
     },
     {
         title: "Project",
         href: '/project',
-        icon: <BsCart />,
+        icon: <AiOutlineProject />,
         content: <Project />
     },
     {
         title: "Payment",
         href: '/payment',
-        icon: <BiUser />,
+        icon: <BiDollar />,
         content: <Payment />
     },
     {
         title: "Employe",
         href: '/employe',
-        icon: <TbAddressBook />,
+        icon: <BiUser />,
         content: <Employe />
     },
     {
         title: "Notice",
         href: '/notice',
-        icon: <TbAddressBook />,
+        icon: <AiFillNotification />,
         content: <Notice />
     },
 
     {
         title: "Sheet",
         href: '/sheet',
-        icon: <TbAddressBook />,
+        icon: <BsFileEarmarkSpreadsheetFill />,
         content: <Sheet />
     },
 
     {
         title: "Settings",
         href: '/setting',
-        icon: <TbAddressBook />,
+        icon: <AiOutlineSetting />,
         content: <Setting />
     },
 
-    {
-        title: "Settings",
-        href: '/setting',
-        icon: <TbAddressBook />,
-        content: <Setting />
-    },
+    // {
+    //     title: "Settings",
+    //     href: '/setting',
+    //     icon: <TbAddressBook />,
+    //     content: <Setting />
+    // },
 
-    {
-        title: "Settings",
-        href: '/setting',
-        icon: <TbAddressBook />,
-        content: <Setting />
-    },
+    // {
+    //     title: "Settings",
+    //     href: '/setting',
+    //     icon: <TbAddressBook />,
+    //     content: <Setting />
+    // },
 
-    {
-        title: "Settings",
-        href: '/setting',
-        icon: <TbAddressBook />,
-        content: <Setting />
-    },
+    // {
+    //     title: "Settings",
+    //     href: '/setting',
+    //     icon: <TbAddressBook />,
+    //     content: <Setting />
+    // },
 
-    {
-        title: "Settings",
-        href: '/setting',
-        icon: <TbAddressBook />,
-        content: <Setting />
-    },
+    // {
+    //     title: "Settings",
+    //     href: '/setting',
+    //     icon: <TbAddressBook />,
+    //     content: <Setting />
+    // },
 
-    {
-        title: "Settings",
-        href: '/setting',
-        icon: <TbAddressBook />,
-        content: <Setting />
-    },
+    // {
+    //     title: "Settings",
+    //     href: '/setting',
+    //     icon: <TbAddressBook />,
+    //     content: <Setting />
+    // },
 
-    {
-        title: "Settings",
-        href: '/setting',
-        icon: <TbAddressBook />,
-        content: <Setting />
-    },
+    // {
+    //     title: "Settings",
+    //     href: '/setting',
+    //     icon: <TbAddressBook />,
+    //     content: <Setting />
+    // },
 
-    {
-        title: "Settings",
-        href: '/setting',
-        icon: <TbAddressBook />,
-        content: <Setting />
-    },
+    // {
+    //     title: "Settings",
+    //     href: '/setting',
+    //     icon: <TbAddressBook />,
+    //     content: <Setting />
+    // },
 
-    {
-        title: "Settings",
-        href: '/setting',
-        icon: <TbAddressBook />,
-        content: <Setting />
-    },
-
-    {
-        title: "Settings",
-        href: '/setting',
-        icon: <TbAddressBook />,
-        content: <Setting />
-    },
-
-    {
-        title: "Settings",
-        href: '/setting',
-        icon: <TbAddressBook />,
-        content: <Setting />
-    },
 
 
 ];

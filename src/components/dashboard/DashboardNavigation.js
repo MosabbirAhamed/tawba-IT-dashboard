@@ -9,7 +9,7 @@ const DashboardNavigation = () => {
 
     return (
         <>
-            <div className=" h-[93vh] overflow-x-auto dashboard transition-all">
+            <div className=" h-[94vh] overflow-x-auto dashboard transition-all">
                 <div className="bg-white px-1 md:px-5  rounded-md space-y-1 md:space-y-3 flex flex-col border-b pt-2 pb-8 border-blue-400">
                     {NavItem.map((nav_item, index) => {
                         return (
