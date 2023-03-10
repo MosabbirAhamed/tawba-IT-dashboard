@@ -54,8 +54,8 @@ const Header = ({ onClick }) => {
                 </div>
 
                 <div className='items-center flex gap-2 md:gap-4'>
-                    <span> <HiOutlineMail className="md:text-[30px] text-[24px] text-gray-600  hover:text-blue-400 transition-all " /> </span>
-                    <span> <AiOutlinePhone className=" md:text-[30px] text-[24px] text-gray-600 hover:text-blue-400 transition-all" /> </span>
+                    <span> <HiOutlineMail className="cursor-pointer md:text-[30px] text-[24px] text-gray-600  hover:text-blue-400 transition-all " /> </span>
+                    <span> <AiOutlinePhone className="cursor-pointer md:text-[30px] text-[24px] text-gray-600 hover:text-blue-400 transition-all" /> </span>
                     <img onClick={(e) => (profileOpen(e))} className='cursor-pointer w-7 md:w-10 h-7 md:h-10 rounded-[50%]' src="/images/admin.PNG" alt="" />
                 </div>
 
